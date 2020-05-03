@@ -14,7 +14,7 @@ app.get("/repositories", (request, response) => {
 });
 
 app.post("/repositories", (request, response) => {
-  const { title, url, techs } = request.body;
+  const { title = "", url = "", techs = [] } = request.body;
 
   const id = uuid();
 
